@@ -82,6 +82,5 @@ def display_ply(ply_path: str) -> None:
     fig.show()
 
 
-
 display_pcd('./files/test_pcd.pcd', (0.1, 0.3, 0.5))
 display_ply('./files/knot.ply')
