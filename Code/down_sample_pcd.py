@@ -3,6 +3,9 @@
 import numpy as np
 
 DESIRED_SIZE = 5000
+T_SHIRT_SIZE = 5000
+HUMAN_SIZE = 15000
+HUMAN_WITH_T_SHIRT = T_SHIRT_SIZE + HUMAN_SIZE
 
 
 def down_sample_pcd(pcd, output_size=DESIRED_SIZE) -> np.array:
