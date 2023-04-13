@@ -6,7 +6,7 @@ import numpy as np
 from typing import Tuple, Union
 
 
-def display_pcd(path: str, color_paint: Union[None, Tuple]=None):
+def display_pcd(path: str, color_paint: Union[None, Tuple] = None):
     pcd = o3d.io.read_point_cloud(path)
     print(pcd)
     points = np.asarray(pcd.points)
@@ -47,7 +47,7 @@ def display_ply(ply_path: str) -> None:
     # NOTE -> Not all ply files are able to display. To display it, there is need to have triangles counted. Not all ply
     # files has triangles counted, especially files after conversion from PCD to PLY
     # http://www.open3d.org/docs/latest/tutorial/Advanced/surface_reconstruction.html
-    #TODO -> check how to count triangles for files without them
+    # TODO -> check how to count triangles for files without them
     mesh = o3d.io.read_triangle_mesh(ply_path)
     if not mesh.has_vertex_normals(): mesh.compute_vertex_normals()
     if not mesh.has_triangle_normals(): mesh.compute_triangle_normals()
@@ -83,4 +83,4 @@ def display_ply(ply_path: str) -> None:
 
 
 display_pcd('./files/test_pcd.pcd', (0.1, 0.3, 0.5))
-display_ply('./files/knot.ply')
+display_ply('./files/Tee_L_from_dae.ply')
